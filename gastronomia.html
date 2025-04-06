@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jonathan Arias Busto" />
+    <meta name="description" content="Página sobre la gastronomía de Riosa." />
+    <meta name="keywords" content="Gastronomía, comida, Asturias, Riosa" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gastronomía de Riosa</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link
+      rel="icon"
+      type="image/vnd.microsoft.icon"
+      href="multimedia/imagenes/cocinero.ico"
+      sizes="32x32"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Gastronomía Típica Asturiana</h1>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a class="active" href="gastronomia.html">Gastronomía</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Gastronomía de Riosa</h2>
+        <p>
+          En Riosa se pueden degustar platos típicos de la gastronomía
+          asturiana, como la fabada, el pote asturiano, la carne gobernada, el
+          arroz con leche, la casadiella, el frixuelo, la sidra, etc. Además, en
+          Riosa se pueden encontrar productos de calidad, como la miel, el
+          queso, la carne o la verdura.
+        </p>
+
+        <picture>
+          <source
+            media="(max-width: 465px)"
+            srcset="multimedia/imagenes/la_vega_riosa-270.jpg"
+          />
+          <source
+            media="(max-width: 799px)"
+            srcset="multimedia/imagenes/la_vega_riosa-433.jpg"
+          />
+          <img
+            alt="La Vega (Riosa)"
+            src="multimedia/imagenes/la_vega_riosa-711.jpg"
+          />
+        </picture>
+
+        <!-- TODO: Enlace para video: https://www.youtube.com/watch?v=Gug39rz8dD8 -->
+
+        <h2>Platos típicos</h2>
+        <ol>
+          <li>Fabada Asturiana</li>
+          <li>Cachopo</li>
+          <li>Sidra Natural</li>
+        </ol>
+
+        <h2>Postres tradicionales</h2>
+        <ul>
+          <li>Arroz con Leche</li>
+          <li>
+            Frixuelos
+            <ul>
+              <li>Con azúcar</li>
+              <li>Con miel</li>
+            </ul>
+          </li>
+          <li>Casadielles</li>
+        </ul>
+
+        <h2>Bebidas típicas</h2>
+        <dl>
+          <dt>Sidra</dt>
+          <dd>Bebida fermentada de manzana, servida escanciada.</dd>
+          <dt>Vino de Cangas</dt>
+          <dd>Vino producido en la comarca de Cangas del Narcea.</dd>
+          <dt>Orujo</dt>
+          <dd>Licor fuerte destilado de los restos de uva.</dd>
+        </dl>
+
+        <h2>Fiestas gastronómicas</h2>
+        <p>
+          En Asturias, la gastronomía está estrechamente ligada a la tradición y
+          la celebración. Cualquier ocasión es buena para disfrutar de la mesa
+          en compañía, como lo demuestran eventos como las
+          <strong>Jornadas de las Setas y el Cabrito</strong> en mayo, la
+          <strong>temporada de los callos</strong> en octubre, coincidiendo con
+          la Feria del Ganado del Rosario, o la
+          <strong>Jornada de los Nabos</strong> y su inseparable
+          <em>compango</em> (chorizo, morcilla...), celebrada en enero. En estas
+          festividades, se disfruta de un menú sublime que incluye nabos, queso
+          <em>afuega'l pitu</em> y deliciosos postres caseros como el arroz con
+          leche y las casadielles.
+        </p>
+
+        <h2>Tabla de platos y precios</h2>
+        <table id="tabla-platos" border="1">
+          <caption>
+            Platos típicos asturianos y sus precios aproximados
+          </caption>
+          <tr>
+            <th id="plato" scope="col">Plato</th>
+            <th id="precio" scope="col">Precio (€)</th>
+          </tr>
+          <tr>
+            <th scope="row" id="fabada" headers="plato">Fabada Asturiana</th>
+            <td headers="fabada precio">12.00</td>
+          </tr>
+          <tr>
+            <th scope="row" id="cachopo" headers="plato">Cachopo</th>
+            <td headers="cachopo precio">15.00</td>
+          </tr>
+          <tr>
+            <th scope="row" id="arroz" headers="plato">Arroz con Leche</th>
+            <td headers="arroz precio">5.00</td>
+          </tr>
+          <tr>
+            <th scope="row" id="casadielles" headers="plato">Casadielles</th>
+            <td headers="casadielles precio">4.50</td>
+          </tr>
+        </table>
+
+        <h2>Recursos multimedia</h2>
+        <!-- TODO: incluir los recursos multimedia -->
+        <!-- <img src="multimedia/fabada.jpg" alt="Plato de fabada asturiana" />
+        <video controls>
+          <source src="multimedia/sidra.mp4" type="video/mp4" />
+          <source src="multimedia/sidra.webm" type="video/webm" />
+          Tu navegador no soporta la reproducción de video.
+        </video> -->
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Jonathan Arias Busto - Turismo en Riosa</p>
+    </footer>
+  </body>
+</html>
