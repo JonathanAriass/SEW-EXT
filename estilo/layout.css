@@ -63,7 +63,7 @@ h2 {
   margin-top: 2rem;
 }
 
-p {
+main p {
   text-align: justify;
   margin-bottom: 1.5rem;
 }
@@ -132,7 +132,7 @@ td {
 /* Pie de página */
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
   width: 100%;
   position: fixed;
   bottom: 0;

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE circuito SYSTEM "circuito.dtd"> -->
+<rutas xmlns="http://www.uniovi.es"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.uniovi.es ruta.xsd">
+
+    <ruta>
+        <nombre>Ruta 1</nombre>
+    </ruta>
+
+    <ruta>
+        <nombre>Ruta 2</nombre>
+    </ruta>
+
+    <ruta>
+        <nombre>Ruta 3</nombre>
+
+        <fecha_inicio>2023-10-01</fecha_inicio>
+        <hora_inicio>08:00</hora_inicio>
+        <duracion>2 horas</duracion>
+        <agencia>Sin agencia</agencia>
+        <descripcion>Descripción de la ruta 3</descripcion>
+        <accesibilidad>Se puede ir con niños</accesibilidad>
+        <lugar_inicio>Ayuntamiento</lugar_inicio>
+        <direccion_inicio>Plaza Mayor, 1</direccion_inicio>
+        <coordenadas_inicio>
+            <longitud>-5.8494</longitud>
+            <latitud>43.3623</latitud>
+            <altitud>0</altitud>
+        </coordenadas_inicio>
+
+        <referencias>
+            <!-- https://www.alltrails.com/es/spain/asturias/riosa -->
+            <referencia>Referencia 1</referencia>
+            <referencia>Referencia 2</referencia>
+            <referencia>Referencia 3</referencia>
+        </referencias>
+
+        <puntuacion>7</puntuacion>
+        
+        <hitos>
+            <hito>
+                <nombre>Hito 1</nombre>
+                <descripcion>Descripción del hito 1</descripcion>
+                <coordenadas_hito>
+                    <longitud>-5.8494</longitud>
+                    <latitud>43.3623</latitud>
+                    <altitud>0</altitud>
+                    <distancia_hito_anterior unidades="m">250</distancia_hito_anterior>
+                    <galeria_fotografias>
+                        <imagen></imagen>
+                    </galeria_fotografias>
+                    <galeria_videos>
+                        <video></video>
+                    </galeria_videos>
+                </coordenadas_hito>
+            </hito>
+        </hitos>
+    </ruta>
+
+</rutas>
