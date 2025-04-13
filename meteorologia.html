@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jonathan Arias Busto" />
+    <meta name="description" content="Página de inicio de Gastronomía." />
+    <meta name="keywords" content="Gastronomía, comida, Asturias" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gastronomía de Riosa</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link
+      rel="icon"
+      type="image/vnd.microsoft.icon"
+      href="multimedia/imagenes/cocinero.ico"
+      sizes="32x32"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/meteorologia.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Gastronomía Típica Asturiana</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="gastronomia.html">Gastronomía</a></li>
+          <li><a class="active" href="meteorologia.html">Meteorología</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    </main>
+    <footer>
+      <p>&copy; 2025 Jonathan Arias Busto - Turismo en Riosa</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+    section:nth-child(1) article table {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto; /* Columna 1: imagen, Columna 2: texto */
+        gap: 10px; /* Espacio entre columnas */
+    }
+</style>

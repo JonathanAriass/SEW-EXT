@@ -2,14 +2,13 @@ class Noticias {
     constructor(apiKey, termino = "Riosa") {
         this.apiKey = apiKey;
         this.termino = termino;
-        this.url = "https://newsapi.org/v2/everything";
-        this.url2 = "https://newsdata.io/api/1/news";
+        this.url = "https://newsdata.io/api/1/news";
         this.iniciar();
     }
 
     iniciar() {
         $.ajax({
-            url: this.url2,
+            url: this.url,
             method: "GET",
             headers: {
                 Authorization: `Bearer ${this.apiKey}`,
@@ -21,41 +20,14 @@ class Noticias {
                 apiKey: this.apiKey
             },
         })
-            .done((respuesta) => this.generarHTML2(respuesta))
+            .done((respuesta) => this.generarHTML(respuesta))
             .fail((error) => {
                 console.error("Error details:", error);
                 this.mostrarError("No se pudieron cargar las noticias.");
             });
     }
 
-    generarHTML(articulos) {
-        const $seccion = $("<section></section>");
-        const $titulo = $("<h2></h2>").text("Últimas noticias sobre Riosa");
-        $seccion.append($titulo);
-
-        if (!articulos || articulos.length === 0) {
-            $seccion.append($("<p></p>").text("No hay noticias disponibles."));
-            $("main").append($seccion);
-            return;
-        }
-
-        $.each(articulos, (_, articulo) => {
-            const $article = $("<article></article>");
-            const $h3 = $("<h3></h3>").text(articulo.title);
-            const $p = $("<p></p>").text(articulo.description || "Sin descripción.");
-            const $a = $("<a></a>")
-                .attr("href", articulo.url)
-                .attr("target", "_blank")
-                .text("Leer más");
-
-            $article.append($h3, $p, $a);
-            $seccion.append($article);
-        });
-
-        $("main").append($seccion);
-    }
-
-    generarHTML2(data) {
+    generarHTML(data) {
         const $seccion = $("<section></section>");
         const $titulo = $("<h2></h2>").text("Últimas noticias sobre Riosa");
         $seccion.append($titulo);
@@ -145,6 +117,5 @@ class Noticias {
 }
 
 $(document).ready(function () {
-    // new Noticias("323817f0d0f843a886bdbfbfd17b7f04");
     new Noticias("pub_80131ceb8488851feb98c27f1a77612260829");
 });

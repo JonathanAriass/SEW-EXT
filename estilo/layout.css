@@ -83,17 +83,17 @@ img {
 }
 
 /* Listas */
-ol,
-ul {
+main section:nth-child(1) ol,
+main section:nth-child(1) ul {
   padding-left: 2rem;
 }
 
-ol li,
-ul li {
+main section:nth-child(1) ol li,
+main section:nth-child(1) ul li {
   margin-bottom: 0.5rem;
 }
 
-ul ul {
+main section:nth-child(1) ul ul {
   margin-top: 0.5rem;
 }
 
