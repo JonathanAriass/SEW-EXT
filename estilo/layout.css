@@ -42,6 +42,7 @@ nav a {
 
 /* Contenido principal */
 main {
+  width: 100%;
   max-width: 70%; /* TODO: pasar a rem */
   margin: 0 auto;
   padding: 2rem;
@@ -56,6 +57,7 @@ main::after {
 
 section {
   padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 h2 {

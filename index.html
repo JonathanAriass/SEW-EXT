@@ -23,6 +23,9 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+
+    <script src="js/carrusel.js"></script>
+    <script src="js/noticias.js"></script>
   </head>
 
   <body>
@@ -34,9 +37,126 @@
         <a href="gastronomia.html">Gastronomía</a>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section>
+        <h2>Recursos turísticos de Riosa</h2>
+        <article>
+          <img src="multimedia/mapa.jpg" alt="Mapa de Riosa" width="600" height="400" />
+          <button type="button">Anterior</button>
+          <button type="button">Siguiente</button>
+        </article>
+      </section>
+
+    </main>
     <footer>
       <p>&copy; 2025 Jonathan Arias Busto - Turismo en Riosa</p>
     </footer>
   </body>
 </html>
+
+<style>
+  section:nth-child(1) article {
+  display: grid;
+  grid-template-rows: auto auto;         /* Fila 1: imagen, Fila 2: botones */
+  grid-template-columns: 1fr 1fr;         /* 2 columnas para botones */
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Imagen ocupa toda la fila */
+section:nth-child(1) article img {
+  grid-column: 1 / span 2; /* Ocupa las dos columnas */
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones ocupan cada uno una celda */
+section:nth-child(1) article button {
+  width: 100%;
+  max-width: 200px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #2c3e50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+section:nth-child(1) article button:hover {
+  background-color: #1a252f;
+}
+
+
+
+
+/* PARA LA SECCION DE NOTICIAS*/
+section:nth-child(2) {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la sección de noticias */
+section:nth-child(2) h2 {
+  color: #1a5276;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+/* Artículos individuales */
+section:nth-child(2) article {
+  background-color: #fff;
+  border-left: 4px solid #1a5276;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:nth-child(2) article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Títulos de noticias */
+section:nth-child(2) article h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+/* Descripción de noticias */
+section:nth-child(2) article p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Enlaces "Leer más" */
+section:nth-child(2) article a {
+  display: inline-block;
+  color: #fff;
+  background-color: #1a5276;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+section:nth-child(2) article a:hover {
+  background-color: #164664;
+  text-decoration: none;
+}
+</style>
