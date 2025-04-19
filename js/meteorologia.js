@@ -8,17 +8,20 @@ class Meteorologia {
 
     iniciar() {
         // Utilizamos un servicio JSONP para eludir las restricciones CORS
-        const urlConProxy = `https://api.allorigins.win/get?url=${encodeURIComponent(`${this.urlBase}/${this.codigoMunicipio}/?api_key=${this.apiKey}`)}`;
+        // const urlConProxy = `https://api.allorigins.win/get?url=${encodeURIComponent(`${this.urlBase}/${this.codigoMunicipio}/?api_key=${this.apiKey}`)}`;
         
+
+
         $.ajax({
-            url: urlConProxy,
+            // url: urlConProxy,
+            url: `${this.urlBase}/${this.codigoMunicipio}/?api_key=${this.apiKey}`,
             method: "GET",
             dataType: "json"
         })
-            .done((respuestaProxy) => {
+            .done((respuesta) => {
+                console.log("Respuesta del servidor:", respuesta.datos);
                 try {
                     // La respuesta viene dentro de la propiedad "contents" como string
-                    const respuesta = JSON.parse(respuestaProxy.contents);
                     if (respuesta.estado === 200 && respuesta.datos) {
                         this.obtenerDatosMeteo(respuesta.datos);
                     } else {
@@ -37,17 +40,16 @@ class Meteorologia {
 
     obtenerDatosMeteo(urlDatos) {
         // Usamos el mismo proxy para la segunda petición
-        const urlConProxy = `https://api.allorigins.win/get?url=${encodeURIComponent(urlDatos)}`;
-        
+        // const urlConProxy = `https://api.allorigins.win/get?url=${encodeURIComponent(urlDatos)}`;
+        const url = `${urlDatos}?api_key=${this.apiKey}`;
         $.ajax({
-            url: urlConProxy,
+            // url: urlConProxy,
+            url: url,
             method: "GET",
             dataType: "json"
         })
-            .done((respuestaProxy) => {
+            .done((datos) => {
                 try {
-                    // La respuesta viene dentro de la propiedad "contents" como string
-                    const datos = JSON.parse(respuestaProxy.contents);
                     if (datos && datos.length > 0) {
                         this.generarHTML(datos[0]);
                     } else {
